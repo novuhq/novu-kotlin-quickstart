@@ -59,8 +59,7 @@ class NovuSample {
                 firstName = "John",
                 lastName = "Doe"
             ),
-            payload = mapOf("customVariables" to "Hello"),
-            transactionId = "transactionId"
+            payload = mapOf("customVariables" to "Hello")
         )
 
         return CoroutineScope(Dispatchers.IO).async {

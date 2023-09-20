@@ -19,21 +19,12 @@
 		<kotlin.compiler.jvmTarget>11</kotlin.compiler.jvmTarget>
 	</properties>
 
-	<repositories>
-		<!-- Novu SDK Repository-->
-		<repository>
-			<id>sonatype</id>
-			<!-- <url>https://s01.oss.sonatype.org/content/repositories/releases/</url> // for release-->
-				<url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>  <!-- // for snapshot-->
-		</repository>
-	</repositories>
-
 	<dependencies>
 		<!-- Novu SDK Dependency-->
 		<dependency>
-			<groupId>io.github.crashiv</groupId>
+			<groupId>co.novu</groupId>
 			<artifactId>novu-kotlin</artifactId>
-			<version>0.1.1-SNAPSHOT</version>
+			<version>1.0.0</version>
 		</dependency>
 
 		<dependency>

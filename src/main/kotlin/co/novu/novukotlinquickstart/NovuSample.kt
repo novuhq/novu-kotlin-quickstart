@@ -1,6 +1,7 @@
 package co.novu.novukotlinquickstart
 
 import co.novu.Novu
+import co.novu.dto.Topic
 import co.novu.dto.request.CreateTopicRequest
 import co.novu.dto.request.SubscriberRequest
 import co.novu.dto.request.TriggerEventRequest
@@ -12,6 +13,7 @@ import co.novu.extensions.addSubscribers
 import co.novu.extensions.createSubscriber
 import co.novu.extensions.createTopic
 import co.novu.extensions.removeSubscriber
+import co.novu.extensions.trigger
 import co.novu.extensions.updateSubscriber
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -93,6 +95,24 @@ class NovuSample {
         val requestBody = SubscriberList(listOf("name"))
         return CoroutineScope(Dispatchers.IO).async {
             novu.removeSubscriber(topicKey, requestBody)
+        }.await()
+    }
+
+    suspend fun triggerNotificationToTopic(): Any? {
+        val novu = Novu(apiKey = "API_KEY")
+        val triggerEventRequest = TriggerEventRequest(
+                name = "test",
+                to = listOf(
+                        Topic(
+                                type = "Topic",
+                                topicKey = "posts:comment:12345"
+                        )
+                ),
+                payload = mapOf("customVariables" to "Hello")
+        )
+
+        return CoroutineScope(Dispatchers.IO).async {
+            novu.trigger(triggerEventRequest)
         }.await()
     }
 }

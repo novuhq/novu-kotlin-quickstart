@@ -1,7 +1,8 @@
 repo_name: novuhq/novu-kotlin-quickstart
 report_id: a56d1c47ef548845a81b185a95ef43d1
+version: 0.1
 repo_type: Public
-timestamp: '2023-11-09T15:12:54+00:00'
+timestamp: '2024-01-04T14:58:18+00:00'
 requested_by: Cliftonz
 provider: github
 branch: main
@@ -15,6 +16,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/3750/pCfEzr6L.png
+  detection_source_url: https://github.com/novuhq/novu-kotlin-quickstart
   detection_source: Repo Metadata
 - name: Spring Framework
   description: An application framework and inversion of control container for the
@@ -26,6 +28,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Frameworks (Full Stack)
   image_url: https://img.stackshare.io/service/2006/spring-framework-project-logo.png
+  detection_source_url: https://github.com/novuhq/novu-kotlin-quickstart/blob/main/pom.xml
   detection_source: pom.xml
   last_updated_by: mayorjay
   last_updated_on: 2023-07-05 22:49:32.000000000 Z
@@ -37,6 +40,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/novuhq/novu-kotlin-quickstart
   detection_source: Repo Metadata
 - name: Apache Camel
   description: A versatile open source integration framework
@@ -47,4 +51,5 @@ tools:
   category: Application Hosting
   sub_category: Platform as a Service
   image_url: https://img.stackshare.io/service/3276/xWt1RFo6_400x400.jpg
+  detection_source_url: https://github.com/novuhq/novu-kotlin-quickstart/blob/main/src/main/resources/application.properties
   detection_source: src/main/resources/application.properties
